@@ -1,0 +1,55 @@
+.content > .shadow {
+    margin: 0 10px;
+    border-radius: .375rem; 
+}
+
+.order,
+.card-info {
+    padding: 14px;
+    border-radius: .375rem; 
+}
+
+
+.content p {
+    font-size: 18px;
+    margin: 0;
+    padding-bottom: 4px;
+}
+
+.content span {
+    font-size: 16px;
+}
+
+
+.order p {
+    font-size: 16px;
+}
+
+.order span {
+    font-size: 14px;
+}
+
+.order:last-child,
+.products > .row:last-child {
+    border: none !important;
+    margin-bottom: 0 !important;
+}
+
+.products p {
+    padding-top: 4px;
+    padding-bottom: 4px;
+}
+
+.btn-outline-green:focus {
+    box-shadow: none !important;
+}
+
+.sort span {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.modal-footer,
+.modal-header {
+    border: none !important;
+}

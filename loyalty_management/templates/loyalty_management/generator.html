@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Генератор{% endblock %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'loyalty_management/generator.css' %}">
+{% endblock %}
+
+{% block content %}
+<div class="content mt-4 mw">
+    <form>
+        {% csrf_token %}
+        <div class="shadow p-2">
+            <div class="d-flex flex-row">
+                <div id="serial-number">
+                    <label class="mb-1">Серия:</label>
+                    <input type="text" class="form-control" placeholder="Серия" maxlength="3">
+                </div>
+                <div id="count">
+                    <label class="mb-1">Количетсво:</label>
+                    <input type="number" class="form-control" placeholder="Количетсво">
+                </div>
+            </div>
+            <label class="mt-1 mb-1">Дата и время выпуска:</label>
+            <input type="datetime-local" id="date1" class="form-control">
+            <label class="mt-1 mb-1">Дата и время окончания:</label>
+            <input type="datetime-local" id="date2" class="form-control">
+        </div>
+        <div class="text-center">
+            <button type="submit" class="btn btn-green mt-3 disabled">Сгенерировать</button>
+        </div>
+    </form>
+</div>
+{% endblock %}
+
+{% block javascript %}
+<script src="{% static 'loyalty_management/generator.js' %}"></script>
+{% endblock %}

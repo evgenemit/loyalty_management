@@ -1,0 +1,34 @@
+.content {
+    padding: 0 10px;
+}
+
+.btn-outline-green:focus {
+    box-shadow: none !important;
+}
+
+.search > div,
+.cards-table {
+    border-radius: .375rem; 
+}
+
+.search form,
+.cards-table {
+    padding: 12px;
+}
+
+.search .row {
+    padding: 0 10px;
+}
+
+.search label {
+    margin-bottom: 3px;
+    padding-left: 3px;
+}
+
+#all-cards {
+    margin-right: 10px;
+}
+
+.cards-table > div:first-child > div {
+    cursor: pointer;
+}

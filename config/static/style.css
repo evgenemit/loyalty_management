@@ -1,0 +1,80 @@
+.mw {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.btn-green {
+    color: white;
+    border: 0 solid #3EAC62;
+    border-radius: 6px;
+    background-color: #3EAC62;
+    font-size: 18px;
+    line-height: 28px;
+    padding: 5px 12px;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.btn-green:hover {
+    border-color: #3BA15D;
+    background-color: #3BA15D;
+    color: white;
+}
+
+.btn-green:focus {
+    border-color: #348A51;
+    background-color: #348A51;
+    color: white;
+}
+
+.btn-outline-green {
+    border-color: #3EAC62;
+    border-radius: 6px;
+    color: #3EAC62;
+    font-size: 18px;
+    line-height: 28px;
+    padding: 5px 12px;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.btn-outline-green:hover {
+    color: white;
+    background-color: #3EAC62;
+}
+
+.btn-outline-green:focus {
+    outline: 0;
+    box-shadow: 0 0 0 0.25rem rgb(62 172 98 / 25%);
+}
+
+.btn-white-green {
+    color: #3EAC62;
+    border: 0 solid white;
+    border-radius: 6px;
+    background-color: white;
+    font-size: 18px;
+    line-height: 28px;
+    padding: 5px 12px;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.btn-white-green:hover {
+    color: white;
+    background-color: #3EAC62;
+    border-color: #3EAC62;
+}
+
+.btn-white-green:focus {
+    outline: 0;
+    box-shadow: none;
+    border-color: #348A51;
+    background-color: #348A51;
+    color: white;
+}
+
+select:focus,
+input:focus,
+input:focus-visible {
+    box-shadow: none !important;
+    border-color: #3EAC62 !important;
+    outline: none;
+}

@@ -1,0 +1,162 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Карта {{ serial_number }}_{{ number }}{% endblock %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'loyalty_management/card.css' %}">
+{% endblock %}
+
+{% block content %}
+<div id="error-message" class="text-center pt-5" style="display: none;">
+    <h3>Ошибка</h3>
+</div>
+
+<div class="content mt-4 mw" style="display: none">
+    {% csrf_token %}
+    <div class="p-3">
+        <div>
+            <h5>Информация о карте</h5>
+        </div>
+        <div class="card-info shadow">
+            <div class="row">
+                <div class="col-5"><p class="text-secondary">Серия</p></div>
+                <div class="col"><p id="serial_number"></p></div>
+            </div>
+            <div class="row">
+                <div class="col-5"><p class="text-secondary">Номер</p></div>
+                <div class="col"><p id="number"></p></div>
+            </div>
+            <div class="row">
+                <div class="col-5"><p class="text-secondary">Дата выпуска</p></div>
+                <div class="col"><p id="date1"></p></div>
+            </div>
+            <div class="row">
+                <div class="col-5"><p class="text-secondary">Дата окончания</p></div>
+                <div class="col"><p id="date2"></p></div>
+            </div>
+            <div class="row">
+                <div class="col-5"><p class="text-secondary">Дата последнего использования</p></div>
+                <div class="col"><p id="last_use"></p></div>
+            </div>
+            <div class="row">
+                <div class="col-5"><p class="text-secondary">Итоговая сумма</p></div>
+                <div class="col"><p id="total_sum"></p></div>
+            </div>
+            <div class="row">
+                <div class="col-5"><p class="text-secondary">Статус</p></div>
+                <div class="col"><p id="status"></p></div>
+            </div>
+            <div class="row">
+                <div class="col-5"><p class="text-secondary">Скидка</p></div>
+                <div class="col"><p id="discount"></p></div>
+            </div>
+
+            <div class="mt-2 d-flex flex-row align-items-center">
+                <button id="modal-update-card" type="button" class="btn btn-outline-green" data-bs-toggle="modal" data-bs-target="#updateCardModal">Изменить статус</button>
+                <button id="modal-delete-card" type="button" class="btn btn-outline-green mx-3" data-bs-toggle="modal" data-bs-target="#deleteCardModal">Удалить карту</button>
+            </div>
+        </div>
+    
+    </div>
+
+    <div class="p-3 mb-5" id="history">
+        <div class="d-flex flex-row align-items-center justify-content-between mb-1">
+            <h5 class="mb-0" style="padding-right: 10px">История заказов</h5>
+            <p class="sort m-0 mt-1 p-0 px-2 fs-6">Сортировка:
+                <span class="px-1 text-primary" id="sort-date">дата и время</span>
+                <span class="px-1 text-secondary" id="sort-sum">сумма</span>
+                <span class="px-1 text-secondary" id="sort-discount">скидка</span>
+                <span class="px-1 text-secondary" id="sort-discount-sum">сумма скидки</span>
+            </p>
+        </div>
+        <div id="orders" style="display: none">
+            <div class="order shadow border-bottom mb-2">
+                <div class="row">
+                    <div class="col-2"><p class="text-secondary">Номер</p></div>
+                    <div class="col"><p id="order-number"></p></div>
+                </div>
+                <div class="row">
+                    <div class="col-2"><p class="text-secondary">Дата и время</p></div>
+                    <div class="col"><p id="order-date"></p></div>
+                </div>
+                <div class="row">
+                    <div class="col-2"><p class="text-secondary">Сумма</p></div>
+                    <div class="col"><p id="order-sum"></p></div>
+                </div>
+                <div class="row">
+                    <div class="col-2"><p class="text-secondary">Скидка</p></div>
+                    <div class="col"><p id="order-discount"></p></div>
+                </div>
+                <div class="row">
+                    <div class="col-2"><p class="text-secondary">Сумма скидки</p></div>
+                    <div class="col"><p id="order-discount-sum"></p></div>
+                </div>
+                
+                <div><h6 class="m-0 mt-2 mb-1">Товары</h6></div>
+                <div class="row">
+                    <p class="col-4 text-secondary">Наименование</p>
+                    <p class="col-2 text-secondary">Цена</p>
+                    <p class="col text-secondary">Цена со скидкой</p>
+                </div>
+                <div class="products">
+                    <div class="row border-bottom">
+                        <p class="col-4">Мандарины</p>
+                        <p class="col-2">23.5 <span>BYN</span></p>
+                        <p class="col">22.5 <span>BYN</span> (цена со скидкой)</p>
+                    </div>
+                </div>
+            </div>
+            <div class="pag mt-3 d-flex flex-row align-items-center justify-content-center">
+                <button id="prev" class="btn btn-outline-green">&lt;</button>
+                <div class="mx-3"><span id="page-number">...</span> / <span id="max-page">...</span></div>
+                <button id="next" class="btn btn-outline-green">&gt;</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal Delete Card -->
+<div class="modal fade" id="deleteCardModal" tabindex="-1" aria-labelledby="deleteCardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="deleteCardModalLabel">Вы действительно хотите удалить карту?</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Отмена</button>
+                <button id="delete-card" type="button" class="btn btn-danger">Удалить</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal Update Status Card -->
+<div class="modal fade" id="updateCardModal" tabindex="-1" aria-labelledby="updateCardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="updateCardModalLabel">Выберите новый статус</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <select class="form-select">
+                    <option value="0" selected>Не активирована</option>
+                    <option value="1">Активирована</option>
+                    <option value="2">Просрочена</option>
+                    <option value="3">В корзине</option>
+                </select>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Отмена</button>
+                <button id="update-card" type="button" class="btn btn-green">Изменить</button>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block javascript %}
+<script src="{% static 'loyalty_management/card.js' %}"></script>
+{% endblock %}
