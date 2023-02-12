@@ -1,0 +1,326 @@
+[
+{
+    "model": "loyalty_management.card",
+    "pk": 1,
+    "fields": {
+        "serial_number": "001",
+        "number": "67775324",
+        "date1": "2023-02-12T12:00:00Z",
+        "date2": "2023-03-22T12:00:00Z",
+        "last_use": null,
+        "total_sum": 0.0,
+        "status": 0,
+        "discount": 2.5
+    }
+},
+{
+    "model": "loyalty_management.card",
+    "pk": 2,
+    "fields": {
+        "serial_number": "001",
+        "number": "36248782",
+        "date1": "2023-02-12T12:00:00Z",
+        "date2": "2023-03-22T12:00:00Z",
+        "last_use": null,
+        "total_sum": 0.0,
+        "status": 0,
+        "discount": 2.5
+    }
+},
+{
+    "model": "loyalty_management.card",
+    "pk": 3,
+    "fields": {
+        "serial_number": "001",
+        "number": "11010688",
+        "date1": "2023-02-12T12:00:00Z",
+        "date2": "2023-03-22T12:00:00Z",
+        "last_use": null,
+        "total_sum": 0.0,
+        "status": 0,
+        "discount": 2.5
+    }
+},
+{
+    "model": "loyalty_management.card",
+    "pk": 4,
+    "fields": {
+        "serial_number": "001",
+        "number": "32890630",
+        "date1": "2023-02-01T21:00:00Z",
+        "date2": null,
+        "last_use": null,
+        "total_sum": 0.0,
+        "status": 0,
+        "discount": 2.5
+    }
+},
+{
+    "model": "loyalty_management.card",
+    "pk": 5,
+    "fields": {
+        "serial_number": "001",
+        "number": "82957201",
+        "date1": "2023-02-01T21:00:00Z",
+        "date2": null,
+        "last_use": null,
+        "total_sum": 0.0,
+        "status": 0,
+        "discount": 2.5
+    }
+},
+{
+    "model": "loyalty_management.card",
+    "pk": 6,
+    "fields": {
+        "serial_number": "002",
+        "number": "26968072",
+        "date1": "2023-02-11T21:00:00Z",
+        "date2": "2023-02-12T21:00:00Z",
+        "last_use": null,
+        "total_sum": 0.0,
+        "status": 0,
+        "discount": 2.5
+    }
+},
+{
+    "model": "loyalty_management.card",
+    "pk": 7,
+    "fields": {
+        "serial_number": "002",
+        "number": "56256076",
+        "date1": "2023-02-11T21:00:00Z",
+        "date2": "2023-02-12T21:00:00Z",
+        "last_use": null,
+        "total_sum": 0.0,
+        "status": 3,
+        "discount": 2.5
+    }
+},
+{
+    "model": "loyalty_management.card",
+    "pk": 8,
+    "fields": {
+        "serial_number": "002",
+        "number": "64521074",
+        "date1": "2023-02-11T21:00:00Z",
+        "date2": "2023-02-12T21:00:00Z",
+        "last_use": null,
+        "total_sum": 0.0,
+        "status": 0,
+        "discount": 2.5
+    }
+},
+{
+    "model": "loyalty_management.card",
+    "pk": 9,
+    "fields": {
+        "serial_number": "002",
+        "number": "81927233",
+        "date1": "2023-02-11T21:00:00Z",
+        "date2": "2023-02-12T21:00:00Z",
+        "last_use": null,
+        "total_sum": 0.0,
+        "status": 3,
+        "discount": 2.5
+    }
+},
+{
+    "model": "loyalty_management.card",
+    "pk": 10,
+    "fields": {
+        "serial_number": "002",
+        "number": "30569183",
+        "date1": "2023-02-11T21:00:00Z",
+        "date2": "2023-02-12T21:00:00Z",
+        "last_use": null,
+        "total_sum": 0.0,
+        "status": 0,
+        "discount": 2.5
+    }
+},
+{
+    "model": "loyalty_management.card",
+    "pk": 14,
+    "fields": {
+        "serial_number": "002",
+        "number": "56276033",
+        "date1": "2023-02-02T10:00:00Z",
+        "date2": "2023-02-12T10:00:00Z",
+        "last_use": null,
+        "total_sum": 0.0,
+        "status": 2,
+        "discount": 2.5
+    }
+},
+{
+    "model": "loyalty_management.card",
+    "pk": 15,
+    "fields": {
+        "serial_number": "002",
+        "number": "38527299",
+        "date1": "2023-02-02T10:00:00Z",
+        "date2": "2023-02-12T10:00:00Z",
+        "last_use": null,
+        "total_sum": 0.0,
+        "status": 2,
+        "discount": 2.5
+    }
+},
+{
+    "model": "loyalty_management.card",
+    "pk": 20,
+    "fields": {
+        "serial_number": "003",
+        "number": "61527709",
+        "date1": "2023-02-12T12:20:00Z",
+        "date2": null,
+        "last_use": "2023-02-12T12:32:42.415Z",
+        "total_sum": 32.6,
+        "status": 1,
+        "discount": 2.5
+    }
+},
+{
+    "model": "loyalty_management.card",
+    "pk": 21,
+    "fields": {
+        "serial_number": "003",
+        "number": "58935054",
+        "date1": "2023-02-12T12:20:00Z",
+        "date2": null,
+        "last_use": "2023-02-12T12:37:57.428Z",
+        "total_sum": 437.06,
+        "status": 1,
+        "discount": 5.0
+    }
+},
+{
+    "model": "loyalty_management.order",
+    "pk": 1,
+    "fields": {
+        "card": 20,
+        "number": "675853",
+        "date": "2023-02-12T12:30:31.314Z",
+        "order_sum": 10.58,
+        "discount": 2.5,
+        "discount_sum": 0.2
+    }
+},
+{
+    "model": "loyalty_management.order",
+    "pk": 2,
+    "fields": {
+        "card": 20,
+        "number": "004881",
+        "date": "2023-02-12T12:32:42.346Z",
+        "order_sum": 22.02,
+        "discount": 2.5,
+        "discount_sum": 0.47
+    }
+},
+{
+    "model": "loyalty_management.order",
+    "pk": 3,
+    "fields": {
+        "card": 21,
+        "number": "084283",
+        "date": "2023-02-12T12:34:32.267Z",
+        "order_sum": 391.47,
+        "discount": 2.5,
+        "discount_sum": 3.52
+    }
+},
+{
+    "model": "loyalty_management.order",
+    "pk": 4,
+    "fields": {
+        "card": 21,
+        "number": "469277",
+        "date": "2023-02-12T12:37:57.398Z",
+        "order_sum": 45.59,
+        "discount": 5.0,
+        "discount_sum": 2.4
+    }
+},
+{
+    "model": "loyalty_management.product",
+    "pk": 1,
+    "fields": {
+        "order": 1,
+        "name": "Ананас, 1 кг",
+        "price": 7.99,
+        "discount_price": 0.0
+    }
+},
+{
+    "model": "loyalty_management.product",
+    "pk": 2,
+    "fields": {
+        "order": 1,
+        "name": "Шоколад молочный",
+        "price": 3.39,
+        "discount_price": 2.79
+    }
+},
+{
+    "model": "loyalty_management.product",
+    "pk": 3,
+    "fields": {
+        "order": 2,
+        "name": "Чай черный",
+        "price": 4.25,
+        "discount_price": 3.69
+    }
+},
+{
+    "model": "loyalty_management.product",
+    "pk": 4,
+    "fields": {
+        "order": 2,
+        "name": "Хлеб",
+        "price": 1.26,
+        "discount_price": 0.0
+    }
+},
+{
+    "model": "loyalty_management.product",
+    "pk": 5,
+    "fields": {
+        "order": 2,
+        "name": "Торт",
+        "price": 17.54,
+        "discount_price": 0.0
+    }
+},
+{
+    "model": "loyalty_management.product",
+    "pk": 6,
+    "fields": {
+        "order": 3,
+        "name": "Увлажнитель воздуха",
+        "price": 140.99,
+        "discount_price": 0.0
+    }
+},
+{
+    "model": "loyalty_management.product",
+    "pk": 7,
+    "fields": {
+        "order": 3,
+        "name": "Пылесос",
+        "price": 289.0,
+        "discount_price": 254.0
+    }
+},
+{
+    "model": "loyalty_management.product",
+    "pk": 8,
+    "fields": {
+        "order": 4,
+        "name": "Электрочайник",
+        "price": 47.99,
+        "discount_price": 0.0
+    }
+}
+]
