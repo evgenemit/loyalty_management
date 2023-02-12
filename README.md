@@ -60,6 +60,7 @@ DB_PORT=
 ```bash
 python3 manage.py migrate
 python3 manage.py loaddata loyalty_management/fixtures/data.json
+python3 manage.py collectstatic
 ```
 
 5. Запуск
