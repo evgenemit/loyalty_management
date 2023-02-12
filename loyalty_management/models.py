@@ -16,7 +16,7 @@ class Card(models.Model):
 	last_use = models.DateTimeField(blank=True, null=True, verbose_name='Дата последнего использования')
 	total_sum = models.FloatField(default=0, verbose_name='Сумма покупок')
 	status = models.IntegerField(choices=STATUS, default=0, verbose_name='Статус')
-	discount = models.FloatField(default=1, verbose_name='Текущая скидка')
+	discount = models.FloatField(default=2.5, verbose_name='Текущая скидка')
 
 	class Meta:
 		verbose_name = 'Карта'
