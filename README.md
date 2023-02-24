@@ -31,6 +31,7 @@ CREATE USER loyalty_user WITH PASSWORD 'passfghjdehf';
 ALTER ROLE loyalty_user SET client_encoding TO 'utf8';
 ALTER ROLE loyalty_user SET default_transaction_isolation TO 'read committed';
 ALTER ROLE loyalty_user SET timezone TO 'Europe/Minsk';
+GRANT ALL PRIVILEGES ON DATABASE loyalty_management TO loyalty_user;
 ```
 
 2. Установка виртуального окружения
